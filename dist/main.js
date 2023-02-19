@@ -93,6 +93,14 @@
   /******/
 })();
 
-import { createHomePage } from "./../src/index.js";
+import {
+  createHomePage,
+  createContactPage,
+  loadHomepageOnClick,
+  loadContactPageOnClick,
+} from "./../src/index.js";
 
 createHomePage();
+createContactPage();
+loadHomepageOnClick();
+loadContactPageOnClick();
