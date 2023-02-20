@@ -96,11 +96,15 @@
 import {
   createHomePage,
   createContactPage,
+  createMenu,
   loadHomepageOnClick,
   loadContactPageOnClick,
+  loadMenuPageOnClick,
 } from "./../src/index.js";
 
 createHomePage();
 createContactPage();
+createMenu();
 loadHomepageOnClick();
 loadContactPageOnClick();
+loadMenuPageOnClick();

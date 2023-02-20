@@ -2,30 +2,6 @@
 const container = document.createElement("div");
 container.id = "container";
 
-export function loadContactPageOnClick() {
-  const contactButton = document.querySelector("#contact");
-
-  contactButton.addEventListener("click", () => {
-    const contactPage = document.querySelector("#contactPage");
-    contactPage.style.display = "flex";
-
-    const homepage = document.querySelector("#homepage");
-    homepage.style.display = "none";
-  });
-}
-
-export function loadHomepageOnClick() {
-  const homeButton = document.querySelector("#home");
-
-  homeButton.addEventListener("click", () => {
-    const contactPage = document.querySelector("#contactPage");
-    contactPage.style.display = "none";
-
-    const homepage = document.querySelector("#homepage");
-    homepage.style.display = "flex";
-  });
-}
-
 export function createHomePage() {
   // Create homepage's header
   const homeHeader = document.createElement("div");
@@ -144,4 +120,97 @@ export function createContactPage() {
   map.style.cssText = "height: 90%; width: 100%";
   contactLocation.appendChild(map);
   contactInfo.appendChild(contactLocation);
+}
+
+export function createMenu() {
+  // Create page
+  const menuPage = document.createElement("div");
+  menuPage.id = "menuPage";
+  menuPage.style.display = "none";
+  container.appendChild(menuPage);
+
+  // Create grid
+  const menuGrid = document.createElement("div");
+  menuGrid.id = "menuGrid";
+  menuPage.appendChild(menuGrid);
+
+  // Menu item
+  const menuItem = document.createElement("div");
+  menuItem.className = "menuItem";
+  menuGrid.appendChild(menuItem);
+
+  // Create container for image
+  const imgContainer = document.createElement("div");
+  imgContainer.className = "img-container";
+  menuItem.appendChild(imgContainer);
+
+  // Create img
+  const img = document.createElement("img");
+  img.src = "./../imgs/ramen.png";
+  img.className = "img";
+  imgContainer.appendChild(img);
+
+  const text = document.createElement("div");
+  text.className = "menuText";
+  text.textContent = "the best ramen in the world";
+  menuItem.appendChild(text);
+
+  const images = ["donut", "fries", "burger", "ice-cream", "pizza", "ramen"];
+
+  // Clone Menu items
+  let clonedMenu = "";
+  for (let i = 0; i < 5; i++) {
+    clonedMenu = menuItem.cloneNode(true);
+    text.textContent = "The best " + images[i] + " in the world";
+    img.src = "./../imgs/" + images[i] + ".png";
+    menuGrid.appendChild(clonedMenu);
+  }
+}
+
+export function loadHomepageOnClick() {
+  const homepage = document.querySelector("#homepage");
+  const contactPage = document.querySelector("#contactPage");
+  const menuPage = document.querySelector("#menuPage");
+
+  // Get button
+  const homeButton = document.querySelector("#home");
+
+  homeButton.addEventListener("click", () => {
+    contactPage.style.display = "none";
+    menuPage.style.display = "none";
+
+    homepage.style.display = "flex";
+  });
+}
+
+export function loadContactPageOnClick() {
+  const homepage = document.querySelector("#homepage");
+  const contactPage = document.querySelector("#contactPage");
+  const menuPage = document.querySelector("#menuPage");
+
+  // Get button
+  const contactButton = document.querySelector("#contact");
+
+  contactButton.addEventListener("click", () => {
+    contactPage.style.display = "flex";
+
+    homepage.style.display = "none";
+    menuPage.style.display = "none";
+  });
+}
+
+export function loadMenuPageOnClick() {
+  const homepage = document.querySelector("#homepage");
+  const contactPage = document.querySelector("#contactPage");
+  const menuPage = document.querySelector("#menuPage");
+
+  // Get button
+  const menuButton = document.querySelector("#menu");
+
+  menuButton.addEventListener("click", () => {
+    menuPage.style.display = "flex";
+
+    homepage.style.display = "none";
+    contactPage.style.display = "none";
+  });
 }
