@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+* {
+  font-family: "Mynerve", cursive;
+}
+
 html {
   height: 100vh;
 }
@@ -38,15 +43,29 @@ body {
 }
 
 #header {
-  height: 3vw;
+  height: 5vw;
   background-color: rgb(0, 0, 0, 0.5);
   color: #eee;
-  font-size: 2vw;
+  font-size: 2.8vw;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3vw;
+}
+
+#home,
+#menu,
+#contact {
   cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#home:hover,
+#menu:hover,
+#contact:hover {
+  transform: translateY(-10px);
+  border-bottom: 2px solid #eee;
+  transition-duration: 0.33s;
 }
 
 #main {
@@ -71,6 +90,7 @@ body {
 #infoTitle {
   margin: auto 0;
   font-size: 2.4vw;
+  text-align: center;
 }
 
 #infoContent {
@@ -95,6 +115,67 @@ body {
 #contactLocation {
   margin-bottom: 1vw;
   width: 27.2vw;
+}
+
+#menuPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  height: 80%;
+  width: 30%;
+  max-height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 1.5vw;
+  border-radius: 30px;
+  row-gap: 0.5vw;
+  align-items: center;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+.menuItem:hover {
+  background-color: rgb(0, 0, 0, 0.35);
+}
+
+.img-container {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menuText {
+  width: 100%;
+  height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-size: 1.1vw;
+  text-align: center;
 }
 
 #footer {
