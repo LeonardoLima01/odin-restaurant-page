@@ -1,3 +1,6 @@
+// Get css
+import "./../style.css";
+
 // Create container
 const container = document.createElement("div");
 container.id = "container";
