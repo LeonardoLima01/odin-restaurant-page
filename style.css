@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Shantell Sans", cursive;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url(./imgs/pageBckg/res.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#header {
+  height: 5vw;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-size: 2.5vw;
+  gap: 4vw;
+}
+
+#headerItem {
+  display: flex;
+  gap: 4vw;
+}
+
+#home,
+#menu,
+#contact {
+  transition-property: transform;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#home:hover,
+#menu:hover,
+#contact:hover {
+  transform: translateY(-10px);
+  border-bottom: 3px solid #eee;
+}
+
+#main {
+  flex: 1;
+  max-height: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+}
+
+#homepage {
+  height: 50%;
+  width: 30%;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 20px;
+}
+
+#homeTitle {
+  font-size: 2.5vw;
+  border-bottom: 3px solid #eee;
+  font-weight: bold;
+}
+
+#homeText {
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+#contactContainer {
+  height: 75%;
+  width: 40%;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 20px;
+}
+
+#telephone,
+#address {
+  font-size: 1.5vw;
+  padding-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+
+#mapContainer {
+  flex: 1;
+  width: 100%;
+  padding: 0 1vw 1vw;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#gridContainer {
+  height: 80%;
+  width: 40%;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  justify-content: center;
+  align-items: center;
+}
+
+#gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 55%;
+  max-width: 100%;
+  gap: 0.5vw;
+}
+
+#foodIcon {
+  height: 100%;
+  max-width: 100%;
+}
+
+#foodText {
+  font-size: 1.5vw;
+}
+
+#footer {
+  height: 3vw;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-size: 1.25vw;
+}
