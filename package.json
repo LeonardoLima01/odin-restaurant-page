@@ -1,5 +1,5 @@
 {
-  "name": "odin-restaurant2",
+  "name": "odin-restaurant-page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/socryy/odin-restaurant2.git"
+    "url": "git+https://github.com/socryy/odin-restaurant-page.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/socryy/odin-restaurant2/issues"
+    "url": "https://github.com/socryy/odin-restaurant-page/issues"
   },
-  "homepage": "https://github.com/socryy/odin-restaurant2#readme",
+  "homepage": "https://github.com/socryy/odin-restaurant-page#readme",
   "devDependencies": {
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
