@@ -20,7 +20,7 @@ body {
 }
 
 #header {
-  height: 5vw;
+  min-height: 5vw;
   background-color: rgb(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -39,20 +39,19 @@ body {
 #menu,
 #contact {
   transition-property: transform;
-  transition-duration: 0.5s;
+  transition-duration: 0.33s;
   cursor: pointer;
 }
 
 #home:hover,
 #menu:hover,
 #contact:hover {
-  transform: translateY(-10px);
+  transform: translateY(-0.5vw);
   border-bottom: 3px solid #eee;
 }
 
 #main {
   flex: 1;
-  max-height: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +138,7 @@ body {
 
 #foodIcon {
   height: 100%;
-  max-width: 100%;
+  width: 40%;
 }
 
 #foodText {
@@ -147,11 +146,12 @@ body {
 }
 
 #footer {
-  height: 3vw;
+  min-height: 3vw;
   background-color: rgb(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #eee;
   font-size: 1.25vw;
+  margin-top: auto;
 }
